@@ -1,0 +1,208 @@
+//martes 9 de agosto mas tarea
+
+// var mi_ventana = Titanium.UI.createWindow({
+// backgroundColor : '#009688'
+// });
+
+// var mi_view_1 = Titanium.UI.createView({
+// backgroundColor : 'purple',
+// opacity : 0.5,
+// width : Titanium.UI.FILL,
+// height : '100dp'
+// });
+
+// var lbl_1 = Titanium.UI.createLabel({
+// text : 'Hola titanium',
+// color : '#FFFFFF'
+// });
+//
+// var mi_view_2 = Titanium.UI.createView({
+// backgroundColor : 'blue',
+// height : Titanium.UI.SIZE,
+// width : Titanium.UI.SIZE
+// });
+//
+// mi_view_2.add(lbl_1);
+// mi_view_1.add(mi_view_2);
+// mi_ventana.add(mi_view_1);
+// mi_ventana.open();
+// var mi_view_1 = Titanium.UI.createView({
+// backgroundColor : '#e0f2f1',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_2 = Titanium.UI.createView({
+// backgroundColor : '#b2dfdb',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_3 = Titanium.UI.createView({
+// backgroundColor : '#80cbc4',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_4 = Titanium.UI.createView({
+// backgroundColor : '#4db6ac',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_5 = Titanium.UI.createView({
+// backgroundColor : '#26a69a',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_6 = Titanium.UI.createView({
+// backgroundColor : '#009688',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_7 = Titanium.UI.createView({
+// backgroundColor : '#00897b',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_8 = Titanium.UI.createView({
+// backgroundColor : '#00796b',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_9 = Titanium.UI.createView({
+// backgroundColor : '#00695c',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_10 = Titanium.UI.createView({
+// backgroundColor : '#004d40',
+// width : '75%',
+// height : '75%'
+// });
+//
+// mi_ventana.open();
+//
+// mi_view_9.add(mi_view_10);
+// mi_view_8.add(mi_view_9);
+// mi_view_7.add(mi_view_8);
+// mi_view_6.add(mi_view_7);
+// mi_view_5.add(mi_view_6);
+// mi_view_4.add(mi_view_5);
+// mi_view_3.add(mi_view_4);
+// mi_view_2.add(mi_view_3);
+// mi_view_1.add(mi_view_2);
+// mi_ventana.add(mi_view_1);
+// Titanium.UI.FILL del que lo contiene
+///Titanium.UI.SIZE del lo que contiene
+
+//miercoles 10 de agosto de 2016
+
+// var win = Titanium.UI.createWindow({
+// backgroundColor : 'black',
+// layout : 'horizontal'
+// });
+//
+// var view_1 = Titanium.UI.createView({
+// backgroundColor : 'red',
+// height : '34%',
+// width : '50%'
+// });
+//
+// var view_2 = Titanium.UI.createView({
+// backgroundColor : 'blue',
+// height : '34%',
+// width : '50%'
+// });
+//
+// var view_3 = Titanium.UI.createView({
+// backgroundColor : 'green',
+// height : '33%',
+// width : '33%'
+// });
+//
+// var view_4 = Titanium.UI.createView({
+// backgroundColor : 'gray',
+// height : '33%',
+// width : '33%',
+// layout : 'absolute'
+// });
+//
+// var view_5 = Titanium.UI.createView({
+// backgroundColor : 'purple',
+// height : '33%',
+// width : '33%'
+// });
+//
+// var view_6 = Titanium.UI.createView({
+// backgroundColor : 'blue',
+// height : '33%',
+// width : '25%'
+// });
+//
+// var view_7 = Titanium.UI.createView({
+// backgroundColor : 'red',
+// height : '33%',
+// width : '25%'
+// });
+//
+// var view_8 = Titanium.UI.createView({
+// backgroundColor : 'gray',
+// height : '33%',
+// width : '25%'
+// });
+//
+// var view_9 = Titanium.UI.createView({
+// backgroundColor : 'green',
+// height : '33%',
+// width : '25%'
+// });
+//
+// var view_10 = Titanium.UI.createView({
+// backgroundColor : 'white',
+// height : "122%",
+// width : '122%',
+// borderRadius : '300dp'
+// });
+//
+// var circulo = Titanium.UI.createImageView({
+// width : Ti.Platform.displayCaps.platformWith * 0.4,
+// height : Ti.Platform.displayCaps.platformWith * 0.4,
+// borderRadius : Ti.Platform.displayCaps.platformWith * 0.2,
+// backgroundColor : 'black'
+// });
+//
+// win.add(circulo);
+// win.add(view_1);
+// win.add(view_2);
+// win.add(view_3);
+// win.add(view_4);
+// win.add(view_5);
+// win.add(view_6);
+// win.add(view_7);
+// win.add(view_8);
+// win.add(view_9);
+//
+// win.open();
+
+//12/08/16
+
+
+//Titanium.App.Properties.setString('midato','hola desde un property');
+
+alert(Titanium.App.Properties.getString('midato'));
+var db= Ti.Database.install('pais.sqlite','pais');
+
+var paises =db.execute('SELECT * FROM paises');
+while(paises.isValidRow()){
+	var id= paises.fieldByName('id_pais');
+	var nombre =paises.filedByName('nombre');
+	Ti.API.info(id+ ' '+ nombre);
+	paises.next();
+}
+paises.close();

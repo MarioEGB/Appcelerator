@@ -1,0 +1,8 @@
+win = Titanium.UI.createWindow({
+	
+	
+});
+
+lbl = Titanium.UI.createLabel({
+	
+});

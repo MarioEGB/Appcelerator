@@ -1,0 +1,107 @@
+var mi_ventana = Titanium.UI.createWindow({
+	backgroundColor : '#009688'
+});
+
+// var mi_view_1 = Titanium.UI.createView({
+// backgroundColor : 'purple',
+// opacity : 0.5,
+// width : Titanium.UI.FILL,
+// height : '100dp'
+// });
+
+// var lbl_1 = Titanium.UI.createLabel({
+// text : 'Hola titanium',
+// color : '#FFFFFF'
+// });
+//
+// var mi_view_2 = Titanium.UI.createView({
+// backgroundColor : 'blue',
+// height : Titanium.UI.SIZE,
+// width : Titanium.UI.SIZE
+// });
+//
+// mi_view_2.add(lbl_1);
+// mi_view_1.add(mi_view_2);
+// mi_ventana.add(mi_view_1);
+// mi_ventana.open();
+
+var mi_view_1 = Titanium.UI.createView({
+	backgroundColor : '#e0f2f1',
+	width : '75%',
+	height : '75%'
+});
+
+mi_ventana.add(mi_view_1);
+
+var mi_view_2 = Titanium.UI.createView({
+	backgroundColor : '#b2dfdb',
+	width : '75%',
+	height : '75%'
+});
+
+mi_view_1.add(mi_view_2);
+
+var mi_view_3 = Titanium.UI.createView({
+	backgroundColor : '#80cbc4',
+	width : '75%',
+	height : '75%'
+});
+
+mi_view_2.add(mi_view_3);
+
+var mi_view_4 = Titanium.UI.createView({
+	backgroundColor : '#4db6ac',
+	width : '75%',
+	height : '75%'
+});
+
+mi_view_3.add(mi_view_4);
+
+var mi_view_5 = Titanium.UI.createView({
+	backgroundColor : '#26a69a',
+	width : '75%',
+	height : '75%'
+});
+
+mi_view_4.add(mi_view_5);
+
+var mi_view_6 = Titanium.UI.createView({
+	backgroundColor : '#009688',
+	width : '75%',
+	height : '75%'
+});
+
+mi_view_5.add(mi_view_6);
+
+var mi_view_7 = Titanium.UI.createView({
+	backgroundColor : '#00897b',
+	width : '75%',
+	height : '75%'
+});
+
+mi_view_6.add(mi_view_7);
+
+var mi_view_8 = Titanium.UI.createView({
+	backgroundColor : '#00796b',
+	width : '75%',
+	height : '75%'
+});
+
+mi_view_7.add(mi_view_8);
+
+var mi_view_9 = Titanium.UI.createView({
+	backgroundColor : '#00695c',
+	width : '75%',
+	height : '75%'
+});
+
+mi_view_8.add(mi_view_9);
+
+var mi_view_10 = Titanium.UI.createView({
+	backgroundColor : '#004d40',
+	width : '75%',
+	height : '75%'
+});
+
+mi_view_9.add(mi_view_10);
+

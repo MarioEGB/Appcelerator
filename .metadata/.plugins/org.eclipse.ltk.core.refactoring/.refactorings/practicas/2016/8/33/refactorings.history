@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Move &apos;Pais.sqlite&apos; to &apos;practicas&apos;" description="Move &apos;Pais.sqlite&apos; to &apos;practicas&apos;" destination="/practicas" element1="Resources/Pais.sqlite" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1471035483842" updateReferences="true"/>&#x0A;<refactoring comment="Move &apos;Pais.sqlite&apos; to &apos;Resources&apos;" description="Move &apos;Pais.sqlite&apos; to &apos;Resources&apos;" destination="Resources" element1="Pais.sqlite" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1471035901109" updateReferences="true"/>
+</session>

@@ -1,0 +1,27 @@
+var mi_ventana = Titanium.UI.createWindow({
+	backgroundColor : '#FFFFFF'
+});
+
+var mi_view_1 = Titanium.UI.createView({
+	backgroundColor : 'purple',
+	opacity : 0.5,
+	width : Titanium.UI.FILL,
+	height : '100dp'
+});
+
+var lbl_1 = Titanium.UI.createLabel({
+	text : 'Hola titanium',
+	color : '#FFFFFF'
+});
+
+var mi_view_2 = Titanium.UI.createView({
+	backgroundColor : 'blue',
+	height : Titanium.UI.SIZE,
+	width : Titanium.UI.SIZE
+});
+
+
+mi_view_2.add(lbl_1);
+mi_view_1.add(mi_view_2);
+mi_ventana.add(mi_view_1);
+mi_ventana.open();

@@ -1,0 +1,106 @@
+// this sets the background color of the master UIView (when there are no windows/tab groups on it)
+Titanium.UI.setBackgroundColor('#000');
+
+// create tab group
+var tabGroup = Titanium.UI.createTabGroup({
+	title:"Spring 1"
+	
+});
+
+
+
+//
+// create base UI tab and root window
+//
+var win1 = Titanium.UI.createWindow({  
+    title:'Tab 1',
+    backgroundColor:'gray'
+});
+
+var win3 = Titanium.UI.createWindow({  
+    title:'Datos En la Base',
+    backgroundColor:'gray'
+});
+
+var db = Ti.Database.install('Spring1.sqlite','Spring1.sqlite');
+var lbl1=  Ti.UI.createLabel({
+	color:"black",
+	text: db.execute('SELECT * FROM Alumnos')
+});
+
+win3.add(lbl1);
+
+var win4 = Titanium.UI.createWindow({  
+    title:'Agregar',
+    backgroundColor:'gray'
+});
+
+var win5 = Titanium.UI.createWindow({  
+    title:'Eliminar',
+    backgroundColor:'gray'
+});
+
+//Tab 1
+var tab1 = Titanium.UI.createTab({  
+    icon:'KS_nav_ui.png',
+    title:'Base de datos',
+    window:win1
+});
+
+var table1 =  Titanium.UI.createTableView({
+	top:130,
+	data:[
+		{title:"MOSTAR DATOS",color : "black",backgroundColor:"gray",height:70,borderColor:"black",textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,font:{fontSize:20, fontWeight:'bold'}},
+		{title:"AGREGAR DATOS", color : "black",backgroundColor:"gray",height:70,borderColor:"black",textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,font:{fontSize:20, fontWeight:'bold'}},
+		{title:"BORRAR DATOS", color : "black",backgroundColor:"gray",height:70,borderColor:"black",textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,font:{fontSize:20, fontWeight:'bold'}}
+	]	
+});
+
+table1.addEventListener('click',function(e){
+  if(e.rowData.title=="MOSTAR DATOS"){
+  		win3.open();
+  }else if(e.rowData.title=="AGREGAR DATOS"){
+  		win4.open();
+  }else{
+  		win5.open();
+  }
+  
+});
+win1.add(table1);
+
+// create controls tab and root window
+//
+var win2 = Titanium.UI.createWindow({  
+    title:'Tab 2',
+    backgroundColor:'#fff'
+});
+
+//mapa
+var mapview = Titanium.Map.createView({
+	top:0,
+	//height:300,
+	mapType: Titanium.Map.STANDARD_TYPE,
+	animate:true,
+	regionFit:true,
+	userLocation:false
+});
+
+var tab2 = Titanium.UI.createTab({  
+    icon:'KS_nav_views.png',
+    title:'Mapa',
+    window:win2
+});
+
+win2.add(mapview);
+//
+//  add tabs
+//
+tabGroup.addTab(tab1);  
+tabGroup.addTab(tab2);  
+
+
+// open tab group
+tabGroup.open();
+
+
+

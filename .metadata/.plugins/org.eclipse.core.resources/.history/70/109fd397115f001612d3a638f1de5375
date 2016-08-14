@@ -1,0 +1,4 @@
+win = Titanium.UI.createWindow({
+	
+	
+});

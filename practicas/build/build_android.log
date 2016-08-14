@@ -1,0 +1,61 @@
+
+2016-08-12 19:55:19
+
+Operating System
+  Name                        = Microsoft Windows 7 Ultimate
+  Version                     = 6.1.7601
+  Architecture                = 32bit
+  # CPUs                      = 2
+  Memory                      = 2682720256
+
+Node.js
+  Node.js Version             = 0.12.7
+  npm Version                 = 2.11.3
+
+Titanium CLI
+  CLI Version                 = 5.0.9
+
+Titanium SDK
+  SDK Version                 = 5.3.1.GA
+  SDK Path                    = C:\ProgramData\Titanium\mobilesdk\win32\5.3.1.GA
+  Target Platform             = android
+
+Command
+  C:\Program Files\nodejs\node.exe C:\Users\MarioEGB\.appcelerator\install\5.4.0\package\node_modules\titanium\lib\titanium.js build run --platform android --log-level trace --sdk 5.3.1.GA --project-dir C:\Users\MarioEGB\Documents\Appcelerator_Studio_Workspace\practicas --target device --android-sdk C:\android-sdk-win --device-id 240000000DFC8800 --skip-js-minify --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 49169 --config-file C:\Users\MarioEGB\AppData\Local\Temp\build-1471049711533.json --no-banner --project-dir C:\Users\MarioEGB\Documents\Appcelerator_Studio_Workspace\practicas
+
+[DEBUG]  Detecting modules in C:\ProgramData\Application Data\Titanium\modules
+[DEBUG]  Detected android module: facebook 5.0.0 @ C:\ProgramData\Application Data\Titanium\modules\android\facebook\5.0.0
+[DEBUG]  Detected android module: facebook 5.2.0 @ C:\ProgramData\Application Data\Titanium\modules\android\facebook\5.2.0
+[DEBUG]  Detected android module: ti.cloudpush 3.4.1 @ C:\ProgramData\Application Data\Titanium\modules\android\ti.cloudpush\3.4.1
+[DEBUG]  Detected android module: ti.map 2.3.10 @ C:\ProgramData\Application Data\Titanium\modules\android\ti.map\2.3.10
+[DEBUG]  Detected android module: ti.map 2.3.6 @ C:\ProgramData\Application Data\Titanium\modules\android\ti.map\2.3.6
+[DEBUG]  Detected android module: ti.touchid 1.0.0 @ C:\ProgramData\Application Data\Titanium\modules\android\ti.touchid\1.0.0
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.10 @ C:\ProgramData\Application Data\Titanium\modules\commonjs\ti.cloud\3.2.10
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.11 @ C:\ProgramData\Application Data\Titanium\modules\commonjs\ti.cloud\3.2.11
+[DEBUG]  Detecting modules in C:\ProgramData\Titanium\modules
+[DEBUG]  Detected android module: facebook 5.0.0 @ C:\ProgramData\Titanium\modules\android\facebook\5.0.0
+[DEBUG]  Detected android module: facebook 5.2.0 @ C:\ProgramData\Titanium\modules\android\facebook\5.2.0
+[DEBUG]  Detected android module: ti.cloudpush 3.4.1 @ C:\ProgramData\Titanium\modules\android\ti.cloudpush\3.4.1
+[DEBUG]  Detected android module: ti.map 2.3.10 @ C:\ProgramData\Titanium\modules\android\ti.map\2.3.10
+[DEBUG]  Detected android module: ti.map 2.3.6 @ C:\ProgramData\Titanium\modules\android\ti.map\2.3.6
+[DEBUG]  Detected android module: ti.touchid 1.0.0 @ C:\ProgramData\Titanium\modules\android\ti.touchid\1.0.0
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.10 @ C:\ProgramData\Titanium\modules\commonjs\ti.cloud\3.2.10
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.11 @ C:\ProgramData\Titanium\modules\commonjs\ti.cloud\3.2.11
+[DEBUG]  No project level plugins to load
+[TRACE]  Snapshotting build directory
+[DEBUG]  Titanium SDK Android directory: C:\ProgramData\Titanium\mobilesdk\win32\5.3.1.GA\android
+[INFO]   Deploy type: test
+[INFO]   Building for target: device
+[INFO]   Building for device: 240000000DFC8800
+[INFO]   Targeting Android SDK API: 23
+[INFO]   Building for the following architectures: armeabi, armeabi-v7a, x86
+[INFO]   Signing with keystore: C:\ProgramData\Titanium\mobilesdk\win32\5.3.1.GA\android\dev_keystore (tidev)
+[DEBUG]  App ID: mx.uam.izt.holati
+[DEBUG]  Classname: HolaTi
+[INFO]   Debugging disabled
+[INFO]   Profiler disabled
+[INFO]   Forcing rebuild: C:\Users\MarioEGB\Documents\Appcelerator_Studio_Workspace\practicas\build\android\build-manifest.json does not exist
+[TRACE]  offline build file C:\Users\MarioEGB\AppData\Local\Temp\build-65e98f827dcc5cefdc5bc03f9baaa2a035d0a4bb.json
+[TRACE]  online 1
+[TRACE]  sending request {"json":{"username":"marioe_guizar@hotmail.com","session":"40179654d59c317582430433eb6b36c4c78b32dc O/rpu37WUJhiZbnglwWUE+vlTEP4uz+SzNuXbr4EWU8Owac7UP+kmv3LB+t/+tok/ab64FBvpSFnCe38yv6vKjmpEhGgU7t0ZHT4PbzYE4QgvkKdQ6kAYXMYl/0FLV0v15+ft11Q1HfMdoaN3xmZyJzPdUznlhX2t0BPsEYbPlpjZ8+OgogHZOZh4zIVgYOFNaNw0gw2EkYN5k+WGZvhBRjGYySBg9gf213sbAFjB4lt1RnAHPbwgLFu9EIlCOYQnS+SOmuzsa3STvOznw0SjxUEVbH5e6+pJ+CddlsmTqsg8zfQLTrsHO46T9WI8QhIafvzo2KNcEsLbs0mxuzqipIBv2U1zLy1l4fKmDYhotRZmGuyV/7XKpb4pkygqkDA07UF3aiDj1XJ1+IVk+r+tOuWdugJdMYJqhJQ3c0fCWzWxD1IrlgscK1PKkJfUTo6cCSuVwabkAnXP9zer4Tbn0k30DkOi9819bjYioBMZfN9q1AjwNHW4JllW65svMksvP2TaqEkoFdHLqi2BzHLR0ElPDh1PO5c7Ph5tGDxkwp+pxvRmTZasUjtaUHruAPBWB6EM3wA2krwOzrlK95wI3zRplNq+G0ths5oopjsz9kUQoa5xkdzsER3hOLcyMYOLSUKbku462dTK/YH1fXQvWb8dtSKWeFdRh7sRcwMc+624IVq7IiXz7B8yzI8yRDcqoV960OHiZnrsh8UKw+4H1x3ZWxasmBRX+6V01XfS+laHrSV2u1ddjKtMEkea5f5nW+nVeoCighYvL69p0egA5hgl6AS+GnS5wRRygWDTKDKbdmyxEHQZnC1ST5aXKiG","ipaddress":"192.168.0.244","fingerprint":"34a2c21aa9ca092eb4c124a22b34bac61c6072af","fingerprint_description":"Windows Machine ID: a6610a85-e453-4a72-be68-2e9ba03dd2f1","guid":"61ccd141-fbdd-4550-9555-94301aaecc7e","appid":"mx.uam.izt.holati","name":"Hola TI","org_id":100131870,"deploytype":"test","tiappxml":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ti:app \n  xmlns:ti=\"http://ti.appcelerator.org\">\n  <id>mx.uam.izt.holati</id>\n  <name>Hola TI</name>\n  <version>1.0</version>\n  <publisher>MarioEGB</publisher>\n  <url>http://izt.uam.mx</url>\n  <description/>\n  <copyright>2016 by MarioEGB</copyright>\n  <icon>appicon.png</icon>\n  <fullscreen>false</fullscreen>\n  <navbar-hidden>false</navbar-hidden>\n  <analytics>true</analytics>\n  <guid>61ccd141-fbdd-4550-9555-94301aaecc7e</guid>\n  <property name=\"ti.ui.defaultunit\" type=\"string\">dp</property>\n  <ios>\n    <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>\n    <plist>\n      <dict>\n        <key>UISupportedInterfaceOrientations~iphone</key>\n        <array>\n          <string>UIInterfaceOrientationPortrait</string>\n        </array>\n        <key>UISupportedInterfaceOrientations~ipad</key>\n        <array>\n          <string>UIInterfaceOrientationPortrait</string>\n          <string>UIInterfaceOrientationPortraitUpsideDown</string>\n          <string>UIInterfaceOrientationLandscapeLeft</string>\n          <string>UIInterfaceOrientationLandscapeRight</string>\n        </array>\n        <key>UIRequiresPersistentWiFi</key>\n        <false/>\n        <key>UIPrerenderedIcon</key>\n        <false/>\n        <key>UIStatusBarHidden</key>\n        <false/>\n        <key>UIStatusBarStyle</key>\n        <string>UIStatusBarStyleDefault</string>\n      </dict>\n    </plist>\n  </ios>\n  <android \n    xmlns:android=\"http://schemas.android.com/apk/res/android\"/>\n    <mobileweb>\n      <precache/>\n      <splash>\n        <enabled>true</enabled>\n        <inline-css-images>true</inline-css-images>\n      </splash>\n      <theme>default</theme>\n    </mobileweb>\n    <modules/>\n    <deployment-targets>\n      <target device=\"iphone\">false</target>\n      <target device=\"ipad\">false</target>\n      <target device=\"android\">true</target>\n      <target device=\"mobileweb\">true</target>\n      <target device=\"windows\">false</target>\n    </deployment-targets>\n    <sdk-version>5.3.1.GA</sdk-version>\n    <property name=\"appc-app-id\" type=\"string\">57aa5c5cd400bb5a288fa76a</property>\n  </ti:app>","modules":[]},"gzip":true,"followAllRedirects":true,"url":"https://security.appcelerator.com/build-verify"}
+[TRACE]  result from /build-verify=> {"success":false,"error":"invalid request","code":"com.appcelerator.security.invalid.session"}, err=null

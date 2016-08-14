@@ -1,0 +1,285 @@
+//martes 9 de agosto mas tarea
+
+// var mi_ventana = Titanium.UI.createWindow({
+// backgroundColor : '#009688'
+// });
+
+// var mi_view_1 = Titanium.UI.createView({
+// backgroundColor : 'purple',
+// opacity : 0.5,
+// width : Titanium.UI.FILL,
+// height : '100dp'
+// });
+
+// var lbl_1 = Titanium.UI.createLabel({
+// text : 'Hola titanium',
+// color : '#FFFFFF'
+// });
+//
+// var mi_view_2 = Titanium.UI.createView({
+// backgroundColor : 'blue',
+// height : Titanium.UI.SIZE,
+// width : Titanium.UI.SIZE
+// });
+//
+// mi_view_2.add(lbl_1);
+// mi_view_1.add(mi_view_2);
+// mi_ventana.add(mi_view_1);
+// mi_ventana.open();
+// var mi_view_1 = Titanium.UI.createView({
+// backgroundColor : '#e0f2f1',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_2 = Titanium.UI.createView({
+// backgroundColor : '#b2dfdb',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_3 = Titanium.UI.createView({
+// backgroundColor : '#80cbc4',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_4 = Titanium.UI.createView({
+// backgroundColor : '#4db6ac',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_5 = Titanium.UI.createView({
+// backgroundColor : '#26a69a',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_6 = Titanium.UI.createView({
+// backgroundColor : '#009688',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_7 = Titanium.UI.createView({
+// backgroundColor : '#00897b',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_8 = Titanium.UI.createView({
+// backgroundColor : '#00796b',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_9 = Titanium.UI.createView({
+// backgroundColor : '#00695c',
+// width : '75%',
+// height : '75%'
+// });
+//
+// var mi_view_10 = Titanium.UI.createView({
+// backgroundColor : '#004d40',
+// width : '75%',
+// height : '75%'
+// });
+//
+// mi_ventana.open();
+//
+// mi_view_9.add(mi_view_10);
+// mi_view_8.add(mi_view_9);
+// mi_view_7.add(mi_view_8);
+// mi_view_6.add(mi_view_7);
+// mi_view_5.add(mi_view_6);
+// mi_view_4.add(mi_view_5);
+// mi_view_3.add(mi_view_4);
+// mi_view_2.add(mi_view_3);
+// mi_view_1.add(mi_view_2);
+// mi_ventana.add(mi_view_1);
+// Titanium.UI.FILL del que lo contiene
+///Titanium.UI.SIZE del lo que contiene
+
+//miercoles 10 de agosto de 2016
+
+// var win = Titanium.UI.createWindow({
+// backgroundColor : 'black',
+// layout : 'horizontal'
+// });
+//
+// var view_1 = Titanium.UI.createView({
+// backgroundColor : 'red',
+// height : '34%',
+// width : '50%'
+// });
+//
+// var view_2 = Titanium.UI.createView({
+// backgroundColor : 'blue',
+// height : '34%',
+// width : '50%'
+// });
+//
+// var view_3 = Titanium.UI.createView({
+// backgroundColor : 'green',
+// height : '33%',
+// width : '33%'
+// });
+//
+// var view_4 = Titanium.UI.createView({
+// backgroundColor : 'gray',
+// height : '33%',
+// width : '33%',
+// layout : 'absolute'
+// });
+//
+// var view_5 = Titanium.UI.createView({
+// backgroundColor : 'purple',
+// height : '33%',
+// width : '33%'
+// });
+//
+// var view_6 = Titanium.UI.createView({
+// backgroundColor : 'blue',
+// height : '33%',
+// width : '25%'
+// });
+//
+// var view_7 = Titanium.UI.createView({
+// backgroundColor : 'red',
+// height : '33%',
+// width : '25%'
+// });
+//
+// var view_8 = Titanium.UI.createView({
+// backgroundColor : 'gray',
+// height : '33%',
+// width : '25%'
+// });
+//
+// var view_9 = Titanium.UI.createView({
+// backgroundColor : 'green',
+// height : '33%',
+// width : '25%'
+// });
+//
+// var view_10 = Titanium.UI.createView({
+// backgroundColor : 'white',
+// height : "122%",
+// width : '122%',
+// borderRadius : '300dp'
+// });
+//
+// var circulo = Titanium.UI.createImageView({
+// width : Ti.Platform.displayCaps.platformWith * 0.4,
+// height : Ti.Platform.displayCaps.platformWith * 0.4,
+// borderRadius : Ti.Platform.displayCaps.platformWith * 0.2,
+// backgroundColor : 'black'
+// });
+//
+// win.add(circulo);
+// win.add(view_1);
+// win.add(view_2);
+// win.add(view_3);
+// win.add(view_4);
+// win.add(view_5);
+// win.add(view_6);
+// win.add(view_7);
+// win.add(view_8);
+// win.add(view_9);
+//
+// win.open();
+
+//ejercicio 2
+
+var ventana = Titanium.UI.createWindow({
+	backgroundImage : 'images/fondo_chica.png',
+	layout : 'vertical'
+});
+
+/**
+ * ------- VISTA SUPERIOR -------
+ */
+var view_sup = Titanium.UI.createView({
+	backgroundColor : 'red',
+	opacity : 0.5,
+	width : Titanium.UI.FILL,
+	height : '60%'
+});
+
+var view_mes_hora = Titanium.UI.createView({
+	//backgroundColor : 'pink',
+	//opacity : 0.5,
+	width : Titanium.UI.SIZE,
+	height : Titanium.UI.SIZE,
+	top: '15%',
+	layout : 'vertical'
+});
+
+var lb_mes = Titanium.UI.createLabel({
+	text : 'Ago',
+	color : '#FFFFFF',
+	font : {
+		fontSize : 24
+	}
+});
+
+var lb_hora = Titanium.UI.createLabel({
+	text : '21:30',
+	color : '#FFFFFF',
+	font : {
+		fontSize : 40
+	}
+});
+
+view_mes_hora.add(lb_mes);
+view_mes_hora.add(lb_hora);
+
+/**
+ * ------- VISTA INFERIOR -------
+ */
+var view_inf = Titanium.UI.createView({
+	//backgroundColor : 'blue',
+	//opacity : 0.5,
+	width : Titanium.UI.FILL,
+	height : '40%',
+	layout: 'vertical'
+});
+
+var view_dias = Titanium.UI.createView({
+	//backgroundColor : 'purple',
+	//opacity : 0.5,
+	width : Titanium.UI.FILL,
+	height : '25%'
+});
+
+var view_alarma_1 = Titanium.UI.createView({
+	//backgroundColor : 'orange',
+	//opacity : 0.5,
+	width : Titanium.UI.FILL,
+	height : '25%'
+});
+
+var view_alarma_2 = Titanium.UI.createView({
+	//backgroundColor : 'yellow',
+	//opacity : 0.5,
+	width : Titanium.UI.FILL,
+	height : '25%'
+});
+
+var view_alarma_3 = Titanium.UI.createView({
+	//backgroundColor : 'cyan',
+	//opacity : 0.5,
+	width : Titanium.UI.FILL,
+	height : '25%'
+});
+
+view_sup.add(view_mes_hora);
+ventana.add(view_sup);
+
+view_inf.add(view_dias);
+view_inf.add(view_alarma_1);
+view_inf.add(view_alarma_2);
+view_inf.add(view_alarma_3);
+ventana.add(view_inf);
+ventana.open();

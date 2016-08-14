@@ -1,0 +1,8 @@
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/PruebaF/build/android/gen/android/support/v7/appcompat/R.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/PruebaF/build/android/gen/android/support/v7/cardview/R.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/PruebaF/build/android/gen/com/prueba/AssetCryptImpl.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/PruebaF/build/android/gen/com/prueba/PruebafActivity.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/PruebaF/build/android/gen/com/prueba/PruebafAppInfo.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/PruebaF/build/android/gen/com/prueba/PruebafApplication.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/PruebaF/build/android/gen/com/prueba/R.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/PruebaF/build/android/gen/ti/modules/titanium/ui/R.java"
