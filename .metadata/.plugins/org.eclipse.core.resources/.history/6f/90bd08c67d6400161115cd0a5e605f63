@@ -1,0 +1,163 @@
+var win = Titanium.UI.createWindow({
+	theme : 'materialThemeNoAB',
+	backgroundImage : '/imgs/fondo.png',
+	layout : 'horizontal'
+});
+
+var win2 = Titanium.UI.createWindow({
+	theme : 'materialThemeNoAB',
+	layout : 'vertival'
+});
+
+var view_1 = Titanium.UI.createView({
+	height : '12%',
+	width : Titanium.UI.FILL,
+	layout : 'Absolute'
+});
+
+var boton = Titanium.UI.createButton({
+	title : 'FAVORITOS',
+	width : Titanium.UI.SIZE,
+	height : Titanium.UI.SIZE,
+	borderRadius : '50dp'
+});
+
+view_1.add(boton);
+
+boton.addEventListener('click', function() {
+	var wind = Ti.UI.createWindow({
+		theme : 'materialThemeNoAB',
+		backgroundImage : '/imgs/fondo.png',
+		layout : 'vertical'
+	});
+	var vw = Titanium.UI.createView({
+		width : Titanium.UI.FILL,
+		height : '15%',
+		layout : 'horizontal'
+	});
+	var lbl1 = Ti.UI.createImageView({
+		width : '35%',
+		height : '100%',
+		backgroundImage : '/imgs/favoritos.png'
+	});
+	var lbl2 = Ti.UI.createLabel({
+		width : '55%',
+		height : Titanium.UI.FILL,
+		text : 'Favoritos',
+		color : 'white',
+		left : '10%',
+		font : {
+			fontSize : 35,
+			fontWeight : 'bold'
+		}
+
+	});
+
+	vw.add(lbl1);
+	vw.add(lbl2);
+	wind.add(vw);
+	wind.open();
+});
+
+var colores = ['/imgs/entretenimiento.png', '/imgs/ciencia.png', '/imgs/cine.png', '/imgs/deportes.png', '/imgs/tecnologia.png', '/imgs/musica.png', '/imgs/salud.png', '/imgs/libros.png'];
+var nom = ['Entretenimiento', 'Ciencia', 'Cine', 'Deportes', 'Tecnologia', 'Musica', 'Salud', 'Libros'];
+var news =['http://rss.informador.com.mx/informador-entretenimiento?format=xml','2','3','4','5','6','7','8'];
+win.add(view_1);
+
+for (var j = 0; j < 8; j++) {
+	var views = Titanium.UI.createView({
+		height : '22%',
+		width : '50%',
+		layout : 'vertical'
+	});
+
+	var Iviews = Titanium.UI.createImageView({
+		height : '70%',
+		width : '70%',
+		backgroundImage : colores[j]
+	});
+
+	var lbls = Titanium.UI.createLabel({
+		height : '20%',
+		width : '100%',
+		color : 'white',
+		left : '10%',
+		font : {
+			fontSize : 20
+		},
+		text : nom[j]
+	});
+	views.add(Iviews);
+	views.add(lbls);
+	win.add(views);
+	
+	abrir(j);
+	
+}
+
+function abrir(j){
+	views.addEventListener('click', function() {
+
+		var xhr = Titanium.Network.createHTTPClient();
+		//xhr.setTimeout(7000);
+
+		xhr.onload = function() {
+			var window = Ti.UI.createWindow({
+				theme : 'materialThemeNoAB',
+				backgroundImage : '/imgs/fondo.png',
+			});
+			var sview = Ti.UI.createScrollView({
+				layout : 'vertical'
+			});
+
+			var lbltit = Ti.UI.createImageView({
+				width : '35%',
+				height : '100%',
+				backgroundImage : colores[j]
+			});
+			window.add(lbltit);
+			var data = [];
+			var xml = this.responseXML.documentElement;
+			var items = xml.getElementsByTagName("item");
+			var doctitle = xml.evaluate("//channel/title/text()").item(0).nodeValue;
+
+			for (var i = 0; i < items.length; i++) {
+				var noticias = Ti.UI.createView({
+					width:'90%',
+					height: '200dp',
+					layout: 'vertical'
+				});
+
+				var titulo = Titanium.UI.createLabel({
+					text : items.item(i).getElementsByTagName("title").item(0).text
+				});
+
+				var desc = Titanium.UI.createWebView({
+					html : items.item(i).getElementsByTagName("description").item(0).text,
+					width : '100%',
+					//url : items.item(i).getElementsByTagName("link").item(0).text,
+					height : '300dp'
+				});
+
+				noticias.add(titulo);
+				noticias.add(desc);
+				sview.add(noticias);
+			}
+
+			window.add(sview);
+			window.open();
+		};
+		
+		xhr.onerror = function() {
+			alert('Fallo en la carga de la pagina');
+		};
+		var url= news[j];
+		console.log(url);
+		xhr.open("GET", url);
+		xhr.send();
+
+	});
+}
+
+win.open();
+

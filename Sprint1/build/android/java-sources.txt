@@ -1,0 +1,8 @@
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/Appcelerator/Sprint1/build/android/gen/android/support/v7/appcompat/R.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/Appcelerator/Sprint1/build/android/gen/android/support/v7/cardview/R.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/Appcelerator/Sprint1/build/android/gen/com/MarioEGB/Spring1/AssetCryptImpl.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/Appcelerator/Sprint1/build/android/gen/com/MarioEGB/Spring1/R.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/Appcelerator/Sprint1/build/android/gen/com/MarioEGB/Spring1/Sprinng1Activity.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/Appcelerator/Sprint1/build/android/gen/com/MarioEGB/Spring1/Sprinng1AppInfo.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/Appcelerator/Sprint1/build/android/gen/com/MarioEGB/Spring1/Sprinng1Application.java"
+"C:/Users/MarioEGB/Documents/Appcelerator_Studio_Workspace/Appcelerator/Sprint1/build/android/gen/ti/modules/titanium/ui/R.java"

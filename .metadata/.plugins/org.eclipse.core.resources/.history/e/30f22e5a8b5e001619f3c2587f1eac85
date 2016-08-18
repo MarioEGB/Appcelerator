@@ -1,8 +1,0 @@
-var mi_ventana = Titanium.UI.createWindow({
-	backgroundColor: 'red'
-});
-
-var mi_view_1 = Titanium.UI.createView([
-	backgroundColor: 'green'
-]);
-mi_ventana.open();
