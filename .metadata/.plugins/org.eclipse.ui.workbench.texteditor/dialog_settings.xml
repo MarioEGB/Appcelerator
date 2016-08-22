@@ -5,8 +5,10 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="wholeword"/>
-		<item value="with" key="selection"/>
+		<item value="colore" key="selection"/>
 		<list key="findhistory">
+			<item value="colore"/>
+			<item value="eventos"/>
 			<item value="with"/>
 		</list>
 	</section>

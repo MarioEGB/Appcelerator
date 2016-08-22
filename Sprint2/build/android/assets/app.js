@@ -16,11 +16,19 @@ function main() {
 		layout : 'Absolute'
 	});
 
-	var boton = Titanium.UI.createButton({
-		title : 'FAVORITOS',
+	var boton = Titanium.UI.createLabel({
+		text : 'FAVORITOS',
 		width : Titanium.UI.SIZE,
 		height : Titanium.UI.SIZE,
-		borderRadius : '50dp'
+		color : '#000000',
+		borderWidth : '3px',
+		borderColor : '#1b5e20',
+		borderRadius : '12px	',
+		font : {
+			fontSize : 28,
+			fontWeight : 'bold'
+		}
+
 	});
 
 	view_1.add(boton);
@@ -42,6 +50,39 @@ function main() {
 			width : Titanium.UI.FILL,
 			height : '15%',
 			layout : 'horizontal'
+		});
+		vw.addEventListener('click', function() {
+			var query=db.execute('SELECT * FROM favoritos');
+			var datos=0;
+			while(query.isValidRow()){
+				datos++;
+				query.next();
+			}
+			
+			console.log(datos);
+			var dialog = Ti.UI.createAlertDialog({
+				cancel : 1,
+				buttonNames : ['Ok', 'Cancelar'],
+				message : 'Desea eliminar todos los favoritos?',
+				title : 'Eliminar'
+			});
+			if(datos>0){
+			dialog.show();
+			}
+			dialog.addEventListener('click', function(e) {
+				if (e.index === e.source.cancel) {
+
+				} else {
+					db.execute('delete from favoritos where 1');
+					favoritos();
+					var dialog2 = Ti.UI.createAlertDialog({
+						buttonNames : ['Ok'],
+						message : 'Favoritos eliminados con exito',
+						title : 'Exito'
+					});
+					dialog2.show();
+				}
+			});
 		});
 		var lbl1 = Ti.UI.createImageView({
 			width : '35%',
@@ -81,16 +122,15 @@ function main() {
 				layout : 'horizontal'
 			});
 			var titulo = Titanium.UI.createLabel({
-				text : title,
-				color : 'white',
-				left : '3dp'
+				text : "---" + title,
+				color : '#424242',
+				left : '20dp'
 			});
 			var desc = Titanium.UI.createWebView({
 				html : html,
 				width : '75%',
 				left : 0,
-				backgroundImage : '/imgs/fondo.png',
-				color : 'white',
+				backgroundImage : '/imgs/fondo_w.png',
 				height : '300dp'
 			});
 			var delete_fav = Titanium.UI.createImageView({
@@ -104,7 +144,7 @@ function main() {
 				top : 2,
 				height : "10dp",
 				width : Ti.UI.FILL,
-				backgroundImage : "/imgs/fondo_w.jpg"
+				backgroundColor : "#1b5e20"
 			});
 			eventos(delete_fav, desc, title, html, nombre_url, true);
 			noticias.add(titulo);
@@ -123,8 +163,9 @@ function main() {
 	Ti.Database.install('rss.sqlite', 'rss2');
 	var db = Ti.Database.open('rss2');
 	var colores = ['/imgs/entretenimiento.png', '/imgs/ciencia.png', '/imgs/cine.png', '/imgs/deportes.png', '/imgs/tecnologia.png', '/imgs/musica.png', '/imgs/salud.png', '/imgs/libros.png'];
-	var nom = ['Entretenimiento', 'Ciencia', 'Cine', 'Deportes', 'Tecnologia', 'Musica', 'Salud', 'Libros'];
+	var nom = ['DISTRACCION', 'CIENCIA', 'CINE', 'DEPORTES', 'TECNOLOGIA', 'MUSICA', 'SALUD', 'LIBROS'];
 	var news = ['http://rss.informador.com.mx/informador-entretenimiento?format=xml', 'http://www.investigacionyciencia.es/rss/noticias', 'http://www.elmulticine.com/rss.php', 'http://as.com/rss/tags/ultimas_noticias.xml', 'http://www.eluniversal.com.mx/rss/computo.xml', 'http://www.metacritic.com/rss/music', 'http://www.who.int/feeds/entity/mediacentre/news/es/rss.xml', 'http://trabalibros.com/rssfeed/58/116.xml'];
+	var letras = [' #2196f3', '#ff5722', '#ffeb3b', '#795548', '#004d40', '#673ab7', '#ffffff', ' #f44336'];
 	win.add(view_1);
 
 	for (var j = 0; j < 8; j++) {
@@ -143,10 +184,10 @@ function main() {
 		var lbls = Titanium.UI.createLabel({
 			height : '20%',
 			width : '100%',
-			color : 'white',
+			color : letras[j],
 			left : '10%',
 			font : {
-				fontSize : 20
+				fontSize : 22
 			},
 			text : nom[j]
 		});
@@ -188,7 +229,7 @@ function main() {
 					width : '65%',
 					height : '100%',
 					text : nom[j],
-					color : 'white',
+					color : letras[j],
 					//left : "2",
 					font : {
 						fontSize : 25,
@@ -212,16 +253,16 @@ function main() {
 					});
 					var title = items.item(i).getElementsByTagName("title").item(0).text;
 					var titulo = Titanium.UI.createLabel({
-						text : title,
-						color : 'white',
-						left : '10dp'
+						text : "---" + title,
+						color : '#424242',
+						left : '20dp'
 					});
 					var html = items.item(i).getElementsByTagName("description").item(0).text;
 					var desc = Titanium.UI.createWebView({
 						html : html,
 						width : '75%',
 						left : 0,
-						backgroundImage : '/imgs/fondo.png',
+						backgroundImage : '/imgs/fondo_w.png',
 						color : 'white',
 						height : '300dp'
 					});
@@ -236,7 +277,7 @@ function main() {
 						top : 2,
 						height : "10dp",
 						width : Ti.UI.FILL,
-						backgroundImage : "/imgs/fondo_w.jpg"
+						backgroundColor : "#1b5e20"
 					});
 
 					url = items.item(i).getElementsByTagName("link").item(0).text;
@@ -320,4 +361,5 @@ function main() {
 	win.open();
 
 }
+
 main();
